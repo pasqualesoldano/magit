@@ -58,8 +58,6 @@
 
 (defvar magit-wip-before-change-mode)
 
-(require 'magit-popup)
-
 ;;; Options
 
 (defcustom magit-completing-read-function 'magit-builtin-completing-read
@@ -741,7 +739,6 @@ See info node `(magit)Debugging Tools' for more information."
                        "ghub"
                        "graphql"
                        "lv"
-                       "magit-popup"
                        "transient"
                        "treepy"
                        "with-editor"
