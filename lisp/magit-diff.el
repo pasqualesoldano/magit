@@ -2348,7 +2348,8 @@ Do not confuse this with `magit-diff-scope' (which see)."
                  (const (nth 1 magit-refresh-args)))
              (cond ((member "--no-index" const) 'undefined)
                    ((or (not range)
-                        (magit-rev-eq range "HEAD"))
+                        (and (not (string-match-p magit-range-re range))
+                             (magit-rev-eq range "HEAD")))
                     (if (member "--cached" const)
                         'staged
                       'unstaged))
