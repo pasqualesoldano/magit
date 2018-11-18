@@ -962,8 +962,8 @@ string \"true\", otherwise return nil."
 
 (defun magit-rev-eq (a b)
   "Return t if A and B refer to the same commit."
-  (let ((a (magit-rev-verify a))
-        (b (magit-rev-verify b)))
+  (let ((a (magit-rev-verify-commit a))
+        (b (magit-rev-verify-commit b)))
     (and a b (equal a b))))
 
 (defun magit-rev-ancestor-p (a b)
